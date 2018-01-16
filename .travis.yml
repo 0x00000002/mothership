@@ -14,3 +14,5 @@ before_script:
   - sleep 5
 after_script:
   - npm run coverage && cat coverage/lcov.info | coveralls
+service_name: travis-pro
+repo_token: f5uUaWhxtRI0sFBbsLWAsIwizZYYiUPRu

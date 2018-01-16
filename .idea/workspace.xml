@@ -2,11 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ce31dbd-906b-42fe-b9c0-2dac55ac449c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.travis.yml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" afterPath="$PROJECT_DIR$/package-lock.json" />
-      <change beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change beforePath="$PROJECT_DIR$/.travis.yml" afterPath="$PROJECT_DIR$/.travis.yml" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/LICENSE" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/MINIME_README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/README.md" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/Contribution.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/ContributionWallet.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/MSP.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/MSPPlaceholder.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/MiniMeToken.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/MultiSigWallet.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/ReferalsTokenHolder.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/SIT.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/SITExchanger.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/ApproveAndCallReceiver.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/Burnable.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/Controlled.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/ERC20Token.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/Finalizable.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/MiniMeTokenI.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/interface/TokenController.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/misc/Migrations.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/misc/SafeMath.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/test/ContributionMock.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/test/MSPMock.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/test/MSPPlaceholderMock.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/test/SITExchangerMock.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/contracts/test/SITMock.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/migrations/1_initial_migration.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/migrations/2_deploy_contracts.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/package-lock.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/package.json" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/contribution.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/helpers/LeanContribution.sol" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/helpers/assertFail.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/msp_burnable_tests.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/msp_clonable_tests.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/msp_erc20_tests.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/msp_mintable_tests.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/referals.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/test/sit.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/truffle.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/coverageEnv/yarn.lock" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/scTopics" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,7 +72,7 @@
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="576">
-              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -43,8 +81,8 @@
       <file leaf-file-name=".travis.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+            <state relative-caret-position="306">
+              <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -124,6 +162,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -151,12 +190,12 @@
       <option name="presentableId" value="Default" />
       <updated>1516047256929</updated>
       <workItem from="1516047259779" duration="1589000" />
-      <workItem from="1516050686190" duration="1706000" />
+      <workItem from="1516050686190" duration="2156000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3295000" />
+    <option name="totallyTimeSpent" value="3745000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="0" width="1920" height="1080" extended-state="6" />
@@ -212,15 +251,15 @@
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="576">
-          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="35" lean-forward="true" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+        <state relative-caret-position="306">
+          <caret line="17" column="30" lean-forward="false" selection-start-line="17" selection-start-column="30" selection-end-line="17" selection-end-column="30" />
           <folding />
         </state>
       </provider>
