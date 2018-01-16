@@ -1,0 +1,29 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "Mothership Token Sale Smart contracts",
+  "main": "index.js",
+  "dependencies": {
+    "truffle-hdwallet-provider": "^0.0.3"
+  },
+  "devDependencies": {
+    "ethereumjs-testrpc": "^3.0.5",
+    "truffle": "^3.2.5"
+  },
+  "scripts": {
+    "testrpc": "ganache-cli --network-id 15 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c0,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c1,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c2,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c3,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c4,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c5,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c6,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c7,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c8,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006c9,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006d0,100000000000000000000000000000000000 --account=0x42551cf8b134329c39e611b6cf21aac0f0eeae787f378c69b4ddf76aa1b006d1,100000000000000000000000000000000000",
+    "compile": "./node_modules/.bin/truffle compile",
+    "migrate": "./node_modules/.bin/truffle migrate --reset --network development",
+    "test": "./node_modules/.bin/truffle test --network development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sabakaio/mothership-contracts.git"
+  },
+  "author": "Mothership",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/sabakaio/mothership-contracts/issues"
+  },
+  "homepage": "https://github.com/sabakaio/mothership-contracts#readme"
+}
