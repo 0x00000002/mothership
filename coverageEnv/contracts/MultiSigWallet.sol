@@ -3,7 +3,13 @@ pragma solidity ^0.4.11;
 
 /// @title Multisignature wallet - Allows multiple parties to agree on transactions before execution.
 /// @author Stefan George - <stefan.george@consensys.net>
-contract MultiSigWallet {
+contract MultiSigWallet {event __CoverageMultiSigWallet(string fileName, uint256 lineNumber);
+event __FunctionCoverageMultiSigWallet(string fileName, uint256 fnId);
+event __StatementCoverageMultiSigWallet(string fileName, uint256 statementId);
+event __BranchCoverageMultiSigWallet(string fileName, uint256 branchId, uint256 locationIdx);
+event __AssertPreCoverageMultiSigWallet(string fileName, uint256 branchId);
+event __AssertPostCoverageMultiSigWallet(string fileName, uint256 branchId);
+
 
     uint constant public MAX_OWNER_COUNT = 50;
 
@@ -31,69 +37,138 @@ contract MultiSigWallet {
         bool executed;
     }
 
-    modifier onlyWallet() {
-        if (msg.sender != address(this))
-            throw;
+    modifier onlyWallet() {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',1);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',35);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',1);
+if (msg.sender != address(this))
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',2);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',1,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',36);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',1,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',37);
         _;
     }
 
-    modifier ownerDoesNotExist(address owner) {
-        if (isOwner[owner])
-            throw;
+    modifier ownerDoesNotExist(address owner) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',2);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',41);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',3);
+if (isOwner[owner])
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',4);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',2,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',42);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',2,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',43);
         _;
     }
 
-    modifier ownerExists(address owner) {
-        if (!isOwner[owner])
-            throw;
+    modifier ownerExists(address owner) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',3);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',47);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',5);
+if (!isOwner[owner])
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',6);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',3,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',48);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',3,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',49);
         _;
     }
 
-    modifier transactionExists(uint transactionId) {
-        if (transactions[transactionId].destination == 0)
-            throw;
+    modifier transactionExists(uint transactionId) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',4);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',53);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',7);
+if (transactions[transactionId].destination == 0)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',8);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',4,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',54);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',4,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',55);
         _;
     }
 
-    modifier confirmed(uint transactionId, address owner) {
-        if (!confirmations[transactionId][owner])
-            throw;
+    modifier confirmed(uint transactionId, address owner) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',5);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',59);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',9);
+if (!confirmations[transactionId][owner])
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',10);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',5,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',60);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',5,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',61);
         _;
     }
 
-    modifier notConfirmed(uint transactionId, address owner) {
-        if (confirmations[transactionId][owner])
-            throw;
+    modifier notConfirmed(uint transactionId, address owner) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',6);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',65);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',11);
+if (confirmations[transactionId][owner])
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',12);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',6,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',66);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',6,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',67);
         _;
     }
 
-    modifier notExecuted(uint transactionId) {
-        if (transactions[transactionId].executed)
-            throw;
+    modifier notExecuted(uint transactionId) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',7);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',71);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',13);
+if (transactions[transactionId].executed)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',14);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',7,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',72);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',7,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',73);
         _;
     }
 
-    modifier notNull(address _address) {
-        if (_address == 0)
-            throw;
+    modifier notNull(address _address) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',8);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',77);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',15);
+if (_address == 0)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',16);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',8,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',78);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',8,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',79);
         _;
     }
 
-    modifier validRequirement(uint ownerCount, uint _required) {
-        if (   ownerCount > MAX_OWNER_COUNT
+    modifier validRequirement(uint ownerCount, uint _required) {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',9);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',83);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',17);
+if (   ownerCount > MAX_OWNER_COUNT
             || _required > ownerCount
             || _required == 0
             || ownerCount == 0)
-            throw;
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',18);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',9,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',87);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',9,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',88);
         _;
     }
 
     /// @dev Fallback function allows to deposit ether.
     function()
         payable
-    {
-        if (msg.value > 0)
-            Deposit(msg.sender, msg.value);
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',10);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',95);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',19);
+if (msg.value > 0)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',20);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',10,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',96);
+Deposit(msg.sender, msg.value);}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',10,1);}
+
     }
 
     /*
@@ -105,14 +180,28 @@ contract MultiSigWallet {
     function MultiSigWallet(address[] _owners, uint _required)
         public
         validRequirement(_owners.length, _required)
-    {
-        for (uint i=0; i<_owners.length; i++) {
-            if (isOwner[_owners[i]] || _owners[i] == 0)
-                throw;
-            isOwner[_owners[i]] = true;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',11);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',109);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',21);
+for (uint i=0; i<_owners.length; i++) {
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',110);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',22);
+if (isOwner[_owners[i]] || _owners[i] == 0)
+                { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',23);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',11,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',111);
+throw;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',11,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',112);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',24);
+isOwner[_owners[i]] = true;
         }
-        owners = _owners;
-        required = _required;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',114);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',25);
+owners = _owners;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',115);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',26);
+required = _required;
     }
 
     /// @dev Allows to add a new owner. Transaction has to be sent by wallet.
@@ -123,10 +212,16 @@ contract MultiSigWallet {
         ownerDoesNotExist(owner)
         notNull(owner)
         validRequirement(owners.length + 1, required)
-    {
-        isOwner[owner] = true;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',12);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',127);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',27);
+isOwner[owner] = true;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',128);
         owners.push(owner);
-        OwnerAddition(owner);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',129);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',28);
+OwnerAddition(owner);
     }
 
     /// @dev Allows to remove an owner. Transaction has to be sent by wallet.
@@ -135,17 +230,37 @@ contract MultiSigWallet {
         public
         onlyWallet
         ownerExists(owner)
-    {
-        isOwner[owner] = false;
-        for (uint i=0; i<owners.length - 1; i++)
-            if (owners[i] == owner) {
-                owners[i] = owners[owners.length - 1];
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',13);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',139);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',29);
+isOwner[owner] = false;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',140);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',30);
+for (uint i=0; i<owners.length - 1; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',31);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',141);
+if (owners[i] == owner) {__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',12,0);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',142);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',32);
+owners[i] = owners[owners.length - 1];
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',143);
                 break;
-            }
-        owners.length -= 1;
-        if (required > owners.length)
-            changeRequirement(owners.length);
-        OwnerRemoval(owner);
+            }else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',12,1);}
+}
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',145);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',33);
+owners.length -= 1;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',146);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',34);
+if (required > owners.length)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',35);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',13,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',147);
+changeRequirement(owners.length);}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',13,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',148);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',36);
+OwnerRemoval(owner);
     }
 
     /// @dev Allows to replace an owner with a new owner. Transaction has to be sent by wallet.
@@ -156,16 +271,33 @@ contract MultiSigWallet {
         onlyWallet
         ownerExists(owner)
         ownerDoesNotExist(newOwner)
-    {
-        for (uint i=0; i<owners.length; i++)
-            if (owners[i] == owner) {
-                owners[i] = newOwner;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',14);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',160);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',37);
+for (uint i=0; i<owners.length; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',38);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',161);
+if (owners[i] == owner) {__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',14,0);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',162);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',39);
+owners[i] = newOwner;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',163);
                 break;
-            }
-        isOwner[owner] = false;
-        isOwner[newOwner] = true;
-        OwnerRemoval(owner);
-        OwnerAddition(newOwner);
+            }else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',14,1);}
+}
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',165);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',40);
+isOwner[owner] = false;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',166);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',41);
+isOwner[newOwner] = true;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',167);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',42);
+OwnerRemoval(owner);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',168);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',43);
+OwnerAddition(newOwner);
     }
 
     /// @dev Allows to change the number of required confirmations. Transaction has to be sent by wallet.
@@ -174,9 +306,14 @@ contract MultiSigWallet {
         public
         onlyWallet
         validRequirement(owners.length, _required)
-    {
-        required = _required;
-        RequirementChange(_required);
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',15);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',178);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',44);
+required = _required;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',179);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',45);
+RequirementChange(_required);
     }
 
     /// @dev Allows an owner to submit and confirm a transaction.
@@ -187,9 +324,14 @@ contract MultiSigWallet {
     function submitTransaction(address destination, uint value, bytes data)
         public
         returns (uint transactionId)
-    {
-        transactionId = addTransaction(destination, value, data);
-        confirmTransaction(transactionId);
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',16);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',191);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',46);
+transactionId = addTransaction(destination, value, data);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',192);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',47);
+confirmTransaction(transactionId);
     }
 
     /// @dev Allows an owner to confirm a transaction.
@@ -199,10 +341,17 @@ contract MultiSigWallet {
         ownerExists(msg.sender)
         transactionExists(transactionId)
         notConfirmed(transactionId, msg.sender)
-    {
-        confirmations[transactionId][msg.sender] = true;
-        Confirmation(msg.sender, transactionId);
-        executeTransaction(transactionId);
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',17);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',203);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',48);
+confirmations[transactionId][msg.sender] = true;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',204);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',49);
+Confirmation(msg.sender, transactionId);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',205);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',50);
+executeTransaction(transactionId);
     }
 
     /// @dev Allows an owner to revoke a confirmation for a transaction.
@@ -212,9 +361,14 @@ contract MultiSigWallet {
         ownerExists(msg.sender)
         confirmed(transactionId, msg.sender)
         notExecuted(transactionId)
-    {
-        confirmations[transactionId][msg.sender] = false;
-        Revocation(msg.sender, transactionId);
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',18);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',216);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',51);
+confirmations[transactionId][msg.sender] = false;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',217);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',52);
+Revocation(msg.sender, transactionId);
     }
 
     /// @dev Allows anyone to execute a confirmed transaction.
@@ -222,17 +376,33 @@ contract MultiSigWallet {
     function executeTransaction(uint transactionId)
         public
         notExecuted(transactionId)
-    {
-        if (isConfirmed(transactionId)) {
-            Transaction tx = transactions[transactionId];
-            tx.executed = true;
-            if (tx.destination.call.value(tx.value)(tx.data))
-                Execution(transactionId);
-            else {
-                ExecutionFailure(transactionId);
-                tx.executed = false;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',19);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',226);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',53);
+if (isConfirmed(transactionId)) {__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',15,0);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',227);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',54);
+Transaction tx = transactions[transactionId];
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',228);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',55);
+tx.executed = true;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',229);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',56);
+if (tx.destination.call.value(tx.value)(tx.data))
+                { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',57);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',16,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',230);
+Execution(transactionId);}
+            else {__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',16,1);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',232);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',58);
+ExecutionFailure(transactionId);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',233);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',59);
+tx.executed = false;
             }
-        }
+        }else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',15,1);}
+
     }
 
     /// @dev Returns the confirmation status of a transaction.
@@ -240,15 +410,29 @@ contract MultiSigWallet {
     /// @return Confirmation status.
     function isConfirmed(uint transactionId)
         public
-        constant
         returns (bool)
-    {
-        uint count = 0;
-        for (uint i=0; i<owners.length; i++) {
-            if (confirmations[transactionId][owners[i]])
-                count += 1;
-            if (count == required)
-                return true;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',20);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',245);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',60);
+uint count = 0;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',246);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',61);
+for (uint i=0; i<owners.length; i++) {
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',247);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',62);
+if (confirmations[transactionId][owners[i]])
+                { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',63);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',17,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',248);
+count += 1;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',17,1);}
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',249);
+             __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',64);
+if (count == required)
+                { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',65);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',18,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',250);
+return true;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',18,1);}
+
         }
     }
 
@@ -264,16 +448,25 @@ contract MultiSigWallet {
         internal
         notNull(destination)
         returns (uint transactionId)
-    {
-        transactionId = transactionCount;
-        transactions[transactionId] = Transaction({
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',21);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',267);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',66);
+transactionId = transactionCount;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',268);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',67);
+transactions[transactionId] = Transaction({
             destination: destination,
             value: value,
             data: data,
             executed: false
         });
-        transactionCount += 1;
-        Submission(transactionId);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',274);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',68);
+transactionCount += 1;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',275);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',69);
+Submission(transactionId);
     }
 
     /*
@@ -284,12 +477,19 @@ contract MultiSigWallet {
     /// @return Number of confirmations.
     function getConfirmationCount(uint transactionId)
         public
-        constant
         returns (uint count)
-    {
-        for (uint i=0; i<owners.length; i++)
-            if (confirmations[transactionId][owners[i]])
-                count += 1;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',22);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',288);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',70);
+for (uint i=0; i<owners.length; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',71);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',289);
+if (confirmations[transactionId][owners[i]])
+                { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',72);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',19,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',290);
+count += 1;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',19,1);}
+}
     }
 
     /// @dev Returns total number of transactions after filters are applied.
@@ -298,23 +498,32 @@ contract MultiSigWallet {
     /// @return Total number of transactions after filters are applied.
     function getTransactionCount(bool pending, bool executed)
         public
-        constant
         returns (uint count)
-    {
-        for (uint i=0; i<transactionCount; i++)
-            if (   pending && !transactions[i].executed
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',23);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',301);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',73);
+for (uint i=0; i<transactionCount; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',74);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',302);
+if (   pending && !transactions[i].executed
                 || executed && transactions[i].executed)
-                count += 1;
+                { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',75);
+__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',20,0);__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',304);
+count += 1;}else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',20,1);}
+}
     }
 
     /// @dev Returns list of owners.
     /// @return List of owner addresses.
     function getOwners()
         public
-        constant
         returns (address[])
-    {
-        return owners;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',24);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',313);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',76);
+return owners;
     }
 
     /// @dev Returns array with owner addresses, which confirmed transaction.
@@ -322,20 +531,40 @@ contract MultiSigWallet {
     /// @return Returns array of owner addresses.
     function getConfirmations(uint transactionId)
         public
-        constant
         returns (address[] _confirmations)
-    {
-        address[] memory confirmationsTemp = new address[](owners.length);
-        uint count = 0;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',25);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',323);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',77);
+address[] memory confirmationsTemp = new address[](owners.length);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',324);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',78);
+uint count = 0;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',325);
         uint i;
-        for (i=0; i<owners.length; i++)
-            if (confirmations[transactionId][owners[i]]) {
-                confirmationsTemp[count] = owners[i];
-                count += 1;
-            }
-        _confirmations = new address[](count);
-        for (i=0; i<count; i++)
-            _confirmations[i] = confirmationsTemp[i];
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',326);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',79);
+for (i=0; i<owners.length; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',80);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',327);
+if (confirmations[transactionId][owners[i]]) {__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',21,0);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',328);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',81);
+confirmationsTemp[count] = owners[i];
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',329);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',82);
+count += 1;
+            }else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',21,1);}
+}
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',331);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',83);
+_confirmations = new address[](count);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',332);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',84);
+for (i=0; i<count; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',85);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',333);
+_confirmations[i] = confirmationsTemp[i];}
     }
 
     /// @dev Returns list of transaction IDs in defined range.
@@ -346,21 +575,41 @@ contract MultiSigWallet {
     /// @return Returns array of transaction IDs.
     function getTransactionIds(uint from, uint to, bool pending, bool executed)
         public
-        constant
         returns (uint[] _transactionIds)
-    {
-        uint[] memory transactionIdsTemp = new uint[](transactionCount);
-        uint count = 0;
+    {__FunctionCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',26);
+
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',346);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',86);
+uint[] memory transactionIdsTemp = new uint[](transactionCount);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',347);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',87);
+uint count = 0;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',348);
         uint i;
-        for (i=0; i<transactionCount; i++)
-            if (   pending && !transactions[i].executed
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',349);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',88);
+for (i=0; i<transactionCount; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',89);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',350);
+if (   pending && !transactions[i].executed
                 || executed && transactions[i].executed)
-            {
-                transactionIdsTemp[count] = i;
-                count += 1;
-            }
-        _transactionIds = new uint[](to - from);
-        for (i=from; i<to; i++)
-            _transactionIds[i - from] = transactionIdsTemp[i];
+            {__BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',22,0);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',353);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',90);
+transactionIdsTemp[count] = i;
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',354);
+                 __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',91);
+count += 1;
+            }else { __BranchCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',22,1);}
+}
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',356);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',92);
+_transactionIds = new uint[](to - from);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',357);
+         __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',93);
+for (i=from; i<to; i++)
+            { __StatementCoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',94);
+__CoverageMultiSigWallet('/home/tknff/projects/Mothership-contracts-master/contracts/MultiSigWallet.sol',358);
+_transactionIds[i - from] = transactionIdsTemp[i];}
     }
 }
