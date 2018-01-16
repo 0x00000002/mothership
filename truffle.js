@@ -28,6 +28,13 @@ module.exports = {
       gas: 4000000,
       gasPrice: 20e9,
     },
+    mocha: {
+        reporter: 'eth-gas-reporter',
+        reporterOptions : {
+            currency: 'CHF',
+            gasPrice: 21
+        }
+    },
     main: {
       network_id: 1,
       provider: providerMain,
