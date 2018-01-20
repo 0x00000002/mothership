@@ -113,7 +113,7 @@ contract('Mothership tokens contribution', function(accounts) {
     await msp.sendTransaction({
       value: web3.toWei(5),
       gas: 300000,
-      gasPrice: '20000000000',
+      gasPrice: '20000000000'
     })
 
     // Buying tokens should affect total supply counters
@@ -130,7 +130,7 @@ contract('Mothership tokens contribution', function(accounts) {
       await msp.sendTransaction({
         value: _amount,
         gas: 300000,
-        gasPrice: '20000000000',
+        gasPrice: '20000000000'
       })
     }, 'Should not allow to buy over the sale total cap')
   })

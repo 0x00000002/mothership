@@ -32,4 +32,5 @@ contract("ReferalsTokenHolder", function(accounts) {
     await referals.spread([accounts[0]], [1000]);
     assert.equal((await msp.balanceOf(accounts[0])).toNumber(), 1000);
   });
+
 });
