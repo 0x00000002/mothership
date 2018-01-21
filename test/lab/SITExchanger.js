@@ -85,6 +85,9 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
         sit = await SIT.new(miniMeTokenFactory.address);
         msp = await MSP.new(miniMeTokenFactory.address);
 
+        await msp.enableTransfers(true, { from: addressMothership });
+        await sit.enableTransfers(true, { from: addressMothership });
+
         contribution = await Contribution.new();
         contributionWallet = await ContributionWallet.new(
             multisigMothership.address,
@@ -108,6 +111,7 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
         await msp.changeController(contribution.address);
 
         assert.isOk(await sit.generateTokens(addressMothership, web3.toWei(1000)));
+        // assert.isOk(await msp.generateTokens(addressMothership, web3.toWei(1000)));
 
         await contribution.initialize(
             msp.address,
@@ -126,6 +130,7 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
 
         await sitExchanger.setMockedBlockNumber(1010000);
         watcher = sitExchanger.TokensCollected();
+        await sit.approve(addressMothership, web3.toWei(1000));
         await sitExchanger.collect();
         let logs = watcher.get();
         assert.equal(logs[0].event, "TokensCollected");
