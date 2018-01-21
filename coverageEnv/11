@@ -1,0 +1,19 @@
+testRpc stderr:
+
+/home/tikonoff/projects/mothership/node_modules/ethereumjs-testrpc-sc/build/cli.node.js:68557
+
+Error: listen EADDRINUSE :::8555
+    at Object._errnoException (util.js:1003:13)
+    at _exceptionWithHostPort (util.js:1024:20)
+    at Server.setupListenHandle [as _listen2] (net.js:1366:14)
+    at listenInCluster (net.js:1407:12)
+    at Server.listen (net.js:1495:7)
+    at Server.server.listen (/home/tikonoff/projects/mothership/node_modules/ethereumjs-testrpc-sc/build/cli.node.js:100502:17)
+    at Object.<anonymous> (/home/tikonoff/projects/mothership/node_modules/ethereumjs-testrpc-sc/build/cli.node.js:44663:8)
+    at __webpack_require__ (/home/tikonoff/projects/mothership/node_modules/ethereumjs-testrpc-sc/build/cli.node.js:21:30)
+    at /home/tikonoff/projects/mothership/node_modules/ethereumjs-testrpc-sc/build/cli.node.js:64:18
+    at Object.<anonymous> (/home/tikonoff/projects/mothership/node_modules/ethereumjs-testrpc-sc/build/cli.node.js:67:10)
+
+Cleaning up...
+testRpc errored after launching as a childprocess.
+Exiting without generating coverage...
