@@ -19,8 +19,6 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
     const addressMothership = accounts[0];
     const addressCommunity = accounts[1];
     const addressTeam = accounts[2];
-    const addressSitHolder1 = accounts[3];
-    const addressSitHolder2 = accounts[4];
 
     beforeEach(async () => {
         miniMeTokenFactory = await MiniMeTokenFactory.new({ from: addressMothership });
@@ -56,9 +54,9 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
         assert.equal(result.toString(), 'false');
     });
 
-    // it("Should return block number", async () => {
-    //     result = await sitEx.getBlockNumber();
-    // });
+    it("Should return block number", async () => {
+        await sitEx.getBlockNumber();                           // TODO: getBlockNumber
+    });
 
     it("Should THROW on proxyPayment()", async () => {
         await assertFail(async () => {
@@ -109,9 +107,7 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
         );
 
         await msp.changeController(contribution.address);
-
         assert.isOk(await sit.generateTokens(addressMothership, web3.toWei(1000)));
-        // assert.isOk(await msp.generateTokens(addressMothership, web3.toWei(1000)));
 
         await contribution.initialize(
             msp.address,
