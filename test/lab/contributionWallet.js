@@ -17,7 +17,7 @@ contract("Contribution Wallet", function(accounts) {
         miniMeTokenFactory = await MiniMeTokenFactory.new({ from: addressMothership });
         msp = await MSP.new(miniMeTokenFactory.address, { from: addressMothership });
         contribution = await Contribution.new();
-        msig = await MultiSigWallet.new([addressCommunity], 1);
+        msig = await MultiSigWallet.new([addressMothership], 1);
         cWallet = await ContributionWallet.new(msig.address, endBlock, contribution.address);
     });
 
@@ -28,7 +28,6 @@ contract("Contribution Wallet", function(accounts) {
         assert.equal(contractBalance, amount);
 
         await thisContract.withdraw({from: msig.address});  // TODO: how to unlock account?
-
     });
 
 });

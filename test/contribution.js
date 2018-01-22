@@ -37,7 +37,6 @@ contract('Mothership tokens contribution', function(accounts) {
     multisigMothership = await MultiSigWallet.new([addressMothership], 1)
     multisigCommunity = await MultiSigWallet.new([addressCommunity], 1)
     multisigTeam = await MultiSigWallet.new([addressTeam], 1)
-    // TODO create a referal bonuses withdrawal contract instead
     multisigReferals = await MultiSigWallet.new([addressTeam], 1)
 
     miniMeTokenFactory = await MiniMeTokenFactory.new()

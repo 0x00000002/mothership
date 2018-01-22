@@ -75,10 +75,10 @@ contract("MSPPlaceholder <Blockchain Labs>, @AT,  21/01/2018 ", function(account
         assert.equal(result.toString(), 'false');
     });
 
-    // it("Should return time", async () => {
-    //     await thisContract.setMockedTime(Date.now()-60*60*10);
-    //     result = await mspPlaceholder.getTime();                     // TODO: getTime()
-    // });
+    it("Should return time", async () => {
+        await thisContract.setMockedTime(Date.now()-60*60*10);
+        result = await thisContract.getTime;                            // TODO:  overridden or not?
+    });
 
     it("Should return FALSE on proxyPayment()", async () => {
         result = await thisContract.proxyPayment.call(addressMothership);

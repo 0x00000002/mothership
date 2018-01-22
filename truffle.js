@@ -1,23 +1,22 @@
-const HDWalletProvider = require('truffle-hdwallet-provider')
+const HDWalletProvider = require('truffle-hdwallet-provider');
 
-const mnemonic =
-  process.env.TEST_MNEMONIC ||
-  'mothership mnemonic mothership mnemonic mothership mnemonic mothership mnemonic mothership mnemonic mothership mnemonic'
+const mnemonic = process.env.TEST_MNEMONIC ||
+  'mothership mnemonic mothership mnemonic mothership mnemonic mothership mnemonic mothership mnemonic mothership mnemonic';
 const providerRopsten = new HDWalletProvider(
   mnemonic,
   'https://ropsten.infura.io/',
-  0,
-)
+  0
+);
 const providerKovan = new HDWalletProvider(
   mnemonic,
   'https://kovan.infura.io',
-  0,
-)
+  0
+);
 const providerMain = new HDWalletProvider(
   process.env.MAIN_MNEMONIC,
   'http://localhost:8545',
-  0,
-)
+  0
+);
 
 module.exports = {
   networks: {
@@ -61,4 +60,4 @@ module.exports = {
   //         gasPrice: 21
   //     }
   // }
-}
+};

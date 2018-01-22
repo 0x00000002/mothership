@@ -121,8 +121,6 @@ contract("any ", function(accounts) {
                 assert.equal(logs[0].args._newController, thisContract.address());
             }
         });
-
     });
-
 });
 

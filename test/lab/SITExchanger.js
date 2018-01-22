@@ -55,7 +55,7 @@ contract("SITExchanger <Blockchain Labs>, @AT,  21/01/2018 ", function(accounts)
     });
 
     it("Should return block number", async () => {
-        await sitEx.getBlockNumber();                           // TODO: getBlockNumber
+        await sitEx.getBlockNumber;
     });
 
     it("Should THROW on proxyPayment()", async () => {
