@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ce31dbd-906b-42fe-b9c0-2dac55ac449c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/test/lab/migrations.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test/lab/MultiSIGWallet.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/11" afterPath="$PROJECT_DIR$/11" />
       <change beforePath="$PROJECT_DIR$/coverage.json" afterPath="$PROJECT_DIR$/coverage.json" />
+      <change beforePath="$PROJECT_DIR$/test/lab/MSPPlaceholder.js" afterPath="$PROJECT_DIR$/test/lab/MSPPlaceholder.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,21 +19,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="migrations.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/lab/migrations.js">
+      <file leaf-file-name="MultiSIGWallet.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/lab/MultiSIGWallet.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="441">
-              <caret line="21" column="112" lean-forward="false" selection-start-line="21" selection-start-column="112" selection-end-line="21" selection-end-column="112" />
+            <state relative-caret-position="486">
+              <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="11" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/11">
+      <file leaf-file-name="sit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/sit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+            <state relative-caret-position="885">
+              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MSPPlaceholder.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/lab/MSPPlaceholder.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="75" column="7" lean-forward="false" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -73,8 +83,10 @@
       <find>changeCon</find>
       <find>await</find>
       <find>watche</find>
-      <find>change</find>
       <find>web3</find>
+      <find>change</find>
+      <find>.send</find>
+      <find>assertfa</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/contracts</dir>
@@ -101,7 +113,6 @@
         <option value="$PROJECT_DIR$/test/referals.js" />
         <option value="$PROJECT_DIR$/test/claimTokens.js" />
         <option value="$PROJECT_DIR$/test/lab/SITExcnange.js" />
-        <option value="$PROJECT_DIR$/test/sit.js" />
         <option value="$PROJECT_DIR$/test/contribution.js" />
         <option value="$PROJECT_DIR$/contracts/test/SITExchangerMock.sol" />
         <option value="$PROJECT_DIR$/test/helpers/assertJump.js" />
@@ -112,11 +123,13 @@
         <option value="$PROJECT_DIR$/contracts/test/SafeMathMock.sol" />
         <option value="$PROJECT_DIR$/test/helpers/assertRevert.js" />
         <option value="$PROJECT_DIR$/test/lab/safeMath.js" />
-        <option value="$PROJECT_DIR$/test/lab/MSPPlaceholder.js" />
         <option value="$PROJECT_DIR$/test/lab/SITExchanger.js" />
         <option value="$PROJECT_DIR$/test/lab/claimTokens.js" />
         <option value="$PROJECT_DIR$/test/lab/migrations.js" />
         <option value="$PROJECT_DIR$/11" />
+        <option value="$PROJECT_DIR$/test/lab/MSPPlaceholder.js" />
+        <option value="$PROJECT_DIR$/test/lab/MultiSIGWallet.js" />
+        <option value="$PROJECT_DIR$/test/sit.js" />
       </list>
     </option>
   </component>
@@ -263,17 +276,18 @@
       <workItem from="1516165640630" duration="277000" />
       <workItem from="1516165946101" duration="9897000" />
       <workItem from="1516226073804" duration="65458000" />
-      <workItem from="1516423683527" duration="49910000" />
+      <workItem from="1516423683527" duration="58931000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133670000" />
+    <option name="totallyTimeSpent" value="142691000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1366" y="-2" width="1920" height="1082" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295099" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -301,18 +315,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="16" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/Downloads/zeppelin-solidity-master/scripts/test.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="5" column="40" lean-forward="false" selection-start-line="5" selection-start-column="40" selection-end-line="5" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/coverage.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="36">
@@ -466,14 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/msp_mintable_tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/coverage.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="95">
@@ -486,14 +485,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
           <caret line="16" column="25" lean-forward="true" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/sit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="42" column="37" lean-forward="false" selection-start-line="42" selection-start-column="37" selection-end-line="42" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -546,26 +537,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/referals.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test/helpers/assertFail.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/msp_erc20_tests.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -674,26 +649,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/lab/MSPPlaceholder.js">
+    <entry file="file://$PROJECT_DIR$/test/contribution.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="744">
-          <caret line="95" column="0" lean-forward="false" selection-start-line="95" selection-start-column="0" selection-end-line="100" selection-end-column="63" />
+        <state relative-caret-position="-1722">
+          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/lab/SITExchanger.js">
+    <entry file="file://$PROJECT_DIR$/11">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="381">
-          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#907#1502#0" expanded="false" />
-            <element signature="e#1510#1561#0" expanded="false" />
-            <element signature="e#2364#2511#0" expanded="false" />
-            <element signature="e#2570#2718#0" expanded="false" />
-            <element signature="e#2923#3045#0" expanded="false" />
-            <element signature="e#3120#5504#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/msp_mintable_tests.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="609">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/referals.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="61" lean-forward="false" selection-start-line="3" selection-start-column="61" selection-end-line="3" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/lab/migrations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="38" lean-forward="true" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -710,26 +702,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/contribution.js">
+    <entry file="file://$PROJECT_DIR$/test/msp_erc20_tests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1722">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+        <state relative-caret-position="-231">
+          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/lab/migrations.js">
+    <entry file="file://$PROJECT_DIR$/test/lab/SITExchanger.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="112" lean-forward="false" selection-start-line="21" selection-start-column="112" selection-end-line="21" selection-end-column="112" />
+        <state relative-caret-position="210">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="139" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/11">
+    <entry file="file://$PROJECT_DIR$/test/lab/MultiSIGWallet.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
+        <state relative-caret-position="486">
+          <caret line="53" column="58" lean-forward="false" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/sit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/lab/MSPPlaceholder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="276">
+          <caret line="75" column="7" lean-forward="false" selection-start-line="75" selection-start-column="7" selection-end-line="75" selection-end-column="7" />
           <folding />
         </state>
       </provider>

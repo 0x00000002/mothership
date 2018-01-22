@@ -77,7 +77,7 @@ contract("MSPPlaceholder <Blockchain Labs>, @AT,  21/01/2018 ", function(account
 
     // it("Should return time", async () => {
     //     await thisContract.setMockedTime(Date.now()-60*60*10);
-    //     result = await mspPlaceholder.getTime();
+    //     result = await mspPlaceholder.getTime();                     // TODO: getTime()
     // });
 
     it("Should return FALSE on proxyPayment()", async () => {
@@ -94,7 +94,7 @@ contract("MSPPlaceholder <Blockchain Labs>, @AT,  21/01/2018 ", function(account
         );
         let controller = await newMSPP.controller();
         watcher = newMSPP.ControllerChanged();
-        await newMSPP.changeController(addressCommunity, { from: addressMothership });     // WTF!?!?!
+        await newMSPP.changeController(addressCommunity, { from: addressMothership });     // TODO: changeController
         let logs = watcher.get();
         console.log("" + logs[0]);
         assert.equal(logs[0].event, "ControllerChanged");
