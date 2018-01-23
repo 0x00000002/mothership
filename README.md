@@ -59,21 +59,20 @@ The audit report is focused on the following key areas - though this is not an e
 ### Minor
 - **\*.claimTokens()**
 Tests for Ether retrieval in contracts are not working, since you can’t send ethers to contracts. See ./test/lab/claimTokens.js
-await thisContract.approve(
-	addressMothership, 
-	web3.toWei(150,"ether"), 
-	{from: addressMothership}
-);
-await web3.eth.sendTransaction({
-	from: addressCommunity,
-	to: thisContract.address,		//  VM Exception error. Reverted.
-	value: amount
-});
+	await thisContract.approve(
+		addressMothership, 
+		web3.toWei(150,"ether"), 
+		{from: addressMothership}
+	);
+	await web3.eth.sendTransaction({
+		from: addressCommunity,
+		to: thisContract.address,		//  VM Exception error. Reverted.
+		value: amount
+	});
 
 
 - **SITExchanger.collect()**
-assert(msp.transfer(msg.sender, amount));
-ack when... You know why, David? Because of the kids. They called me Mr Glass.  [View on GitHub](https://github.com/CLIENT/issues/123)
+	assert(msp.transfer(msg.sender, amount));
 
 ### Moderate
 - None found
@@ -82,10 +81,12 @@ ack when... You know why, David? Because of the kids. They called me Mr Glass.  
 ### Critical
 
 - **SITExchanger.claimTokens()** 
+
 prerequisite: require(token != address(msp)).  Can’t send any address except 0x0
-await thisContract.claimTokens(0xb0030c1cc4b979ee749e71b17c082b915dcd3c92);  // VM Exception error 
-contractBalance = (await sit.balanceOf.call(thisContract.address)).toNumber();
-assert.equal(contractBalance,0);
+
+	await thisContract.claimTokens(0xb0030c1cc4b979ee749e71b17c082b915dcd3c92);  // VM Exception error 
+	contractBalance = (await sit.balanceOf.call(thisContract.address)).toNumber();
+	assert.equal(contractBalance,0);
 
 ## Testing
 To further satisfy test coverage, both `CLIENTToken.sol` and `CLIENTTokenSale.sol` were deployed onto the Kovan Test Network to achieve simulation of a mock sale. This can be viewed in the [Kovan_Tests.md](https://github.com/CLIENT/blob/master/Kovan_Tests.md) checklist.
