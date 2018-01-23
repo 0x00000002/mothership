@@ -3,7 +3,7 @@
 This audit report was undertaken by BlockchainLabs.nz for the purpose of providing feedback to MOTHERSHIP. It has subsequently been shared publicly without any express or implied warranty.
 Solidity contracts were sourced from the public Github repo [njmurarka/ico-solidity](https://github.com/njmurarka/ico-solidity) prior to commit [542b5ca38d7cfc2292e1bb135b8ee10679e54d23](https://github.com/njmurarka/ico-solidity/tree/542b5ca38d7cfc2292e1bb135b8ee10679e54d23) - we would encourage all community members and token holders to make their own assessment of the contracts.
 ## Scope
-All Solidity code contained in [/contracts](CONTRACT-URL) was considered in scope along with the tests contained in [/tests](CONTRACT-TESTS-URL) as a basis for static and dynamic analysis.
+All Solidity code contained in [/contracts](https://github.com/tikonoff/mothership/tree/master/contracts) was considered in scope along with the tests contained in [/tests](https://github.com/tikonoff/mothership/tree/master/test) as a basis for static and dynamic analysis.
 ## Focus Areas
 The audit report is focused on the following key areas - though this is not an exhaustive list.
 ### Correctness
@@ -57,15 +57,36 @@ The audit report is focused on the following key areas - though this is not an e
 ## Findings
 <!-- Here goes a list of issues -->
 ### Minor
-- **Remove updateWhitelist.txt** - `lorem ipsum` Now that we know who you are, I know who I am. I'm not a mistake! It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be? He's the exact opposite of the hero. And most times they're friends, like you and me! I should've known way back when... You know why, David? Because of the kids. They called me Mr Glass.  [View on GitHub](https://github.com/CLIENT/issues/123)
-  - [ ] Not Fixed
+- **\*.claimTokens()**
+Tests for Ether retrieval in contracts are not working, since you can’t send ethers to contracts. See ./test/lab/claimTokens.js
+await thisContract.approve(
+	addressMothership, 
+	web3.toWei(150,"ether"), 
+	{from: addressMothership}
+);
+await web3.eth.sendTransaction({
+	from: addressCommunity,
+	to: thisContract.address,		//  VM Exception error. Reverted.
+	value: amount
+});
+
+
+- **SITExchanger.collect()**
+assert(msp.transfer(msg.sender, amount));
+ack when... You know why, David? Because of the kids. They called me Mr Glass.  [View on GitHub](https://github.com/CLIENT/issues/123)
+
 ### Moderate
 - None found
 ### Major
-- **Remove updateWhitelist.txt** - `lorem ipsum` Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.  [View on GitHub](https://github.com/CLIENT/issues/123)
-  - [ ] Not Fixed
-### Critical
 - None found
+### Critical
+
+- **SITExchanger.claimTokens()** 
+prerequisite: require(token != address(msp)).  Can’t send any address except 0x0
+await thisContract.claimTokens(0xb0030c1cc4b979ee749e71b17c082b915dcd3c92);  // VM Exception error 
+contractBalance = (await sit.balanceOf.call(thisContract.address)).toNumber();
+assert.equal(contractBalance,0);
+
 ## Testing
 To further satisfy test coverage, both `CLIENTToken.sol` and `CLIENTTokenSale.sol` were deployed onto the Kovan Test Network to achieve simulation of a mock sale. This can be viewed in the [Kovan_Tests.md](https://github.com/CLIENT/blob/master/Kovan_Tests.md) checklist.
 ## Conclusion
@@ -73,4 +94,4 @@ Overall we have been fully satisfied with the resulting contracts following the 
 We are pleased to report that no potential vulnerabilities were uncovered during the audit. That the token complies with the recently finalised ERC20 Token Standards. The code has excellent testability and the developers have followed common best practices.
 Of the issues we have raised all of them are minor. This crowdsale has a low risk of ethereum being hacked or stolen. 
 
-[![Coverage Status](https://coveralls.io/repos/github/tikonoff/mothership/badge.svg?branch=master)](https://coveralls.io/github/tikonoff/mothership?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/tikonoff/mothership/badge.svg)](https://coveralls.io/github/tikonoff/mothership)
