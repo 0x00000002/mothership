@@ -91,12 +91,13 @@ prerequisite: require(token != address(msp)).  Can’t send any address except 0
 	contractBalance = (await sit.balanceOf.call(thisContract.address)).toNumber();
 	assert.equal(contractBalance,0);
 	
-	
+
 ## Testing
-To further satisfy test coverage, both `CLIENTToken.sol` and `CLIENTTokenSale.sol` were deployed onto the Kovan Test Network to achieve simulation of a mock sale. This can be viewed in the [Kovan_Tests.md](https://github.com/CLIENT/blob/master/Kovan_Tests.md) checklist.
+To further satisfy test coverage, I need Matt to answer some issues.
 ## Conclusion
-Overall we have been fully satisfied with the resulting contracts following the audit feedback period. We took part in carefully reviewing all source code provided, including deployment testing.
+Work in progress. It's expected to finish this audit until the end of January.
+<!-- Overall we have been fully satisfied with the resulting contracts following the audit feedback period. We took part in carefully reviewing all source code provided, including deployment testing.
 We are pleased to report that no potential vulnerabilities were uncovered during the audit. That the token complies with the recently finalised ERC20 Token Standards. The code has excellent testability and the developers have followed common best practices.
-Of the issues we have raised all of them are minor. This crowdsale has a low risk of ethereum being hacked or stolen. 
+Of the issues we have raised all of them are minor. This crowdsale has a low risk of ethereum being hacked or stolen.  -->
 
 [![Coverage Status](https://coveralls.io/repos/github/tikonoff/mothership/badge.svg)](https://coveralls.io/github/tikonoff/mothership)
