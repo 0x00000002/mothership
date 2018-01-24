@@ -8,7 +8,9 @@ Roles:
 * - Team Member, account[3]*
 * - Referal, account[4]*
 
-## SIT
+## Expected behaviour testing
+
+### SIT
  - [x] #### SIT contract deployed [0xda697](https://kovan.etherscan.io/tx/0xda697ed8f79f88ca0dbaf3dcbb59e42f88b9283082eff0377ab16bd558c42cbd)
  - [x] #### SIT tokens generated for Mothership [0x2e010d](https://kovan.etherscan.io/tx/0x2e010de05d4a03abb0c568a7e147f0a492cf39b8abaa450f71f448d3e868e189)
  - [x] #### Name []()
@@ -16,7 +18,7 @@ Roles:
  - [x] #### Name []()
  - [x] #### Name []()
 
-## MSP
+### MSP
  - [x] #### MSP contract deployed [0xd90d82](0xd90d8282ecf47efabbab65166640f93b2cc723aa7fcf41e7f29fc79f84d3eedc)
  - [x] #### Name []()
  - [x] #### Name []()
@@ -24,4 +26,19 @@ Roles:
  - [x] #### Name []()
  - [x] #### Name []()
 
+
+## Malicious behaviour testing
+
+### SIT
+ - [x] #### Name []()
+ - [x] #### Name []()
+ - [x] #### Name []()
+ - [x] #### Name []()
+
+### MSP
+ - [x] #### Name []()
+ - [x] #### Name []()
+ - [x] #### Name []()
+ - [x] #### Name []()
+ - [x] #### Name []()
 
