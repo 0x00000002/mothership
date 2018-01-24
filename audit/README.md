@@ -57,21 +57,7 @@ The audit report is focused on the following key areas - though this is not an e
 ## Findings
 <!-- Here goes a list of issues -->
 ### Minor
-- **\*.claimTokens()**
-Tests for Ether retrieval in contracts are not working, since you can’t send ethers to contracts. See ./test/lab/claimTokens.js
-	```javascript
-	await thisContract.approve(
-		addressMothership, 
-		web3.toWei(150,"ether"), 
-		{from: addressMothership}
-	);
-	await web3.eth.sendTransaction({
-		from: addressCommunity,
-		to: thisContract.address,		//  VM Exception error. Reverted.
-		value: amount
-	});
-	```
-
+- **[\*.claimTokens()]** (issues/1)
 - **SITExchanger.collect()**
 	```javascript
 	assert(msp.transfer(msg.sender, amount));
