@@ -57,27 +57,14 @@ The audit report is focused on the following key areas - though this is not an e
 ## Findings
 <!-- Here goes a list of issues -->
 ### Minor
-- [\*.claimTokens()](issues/1)
-- **SITExchanger.collect()**
-	```javascript
-	assert(msp.transfer(msg.sender, amount));
-	```
+- **[\*.claimTokens()](https://github.com/tikonoff/mothership/issues/1)** - Tests for Ether retrieval in contracts are not working, since you can’t send ethers to contracts.
 
 ### Moderate
 - None found
 ### Major
 - None found
 ### Critical
-
-- **SITExchanger.claimTokens()** 
-
-prerequisite: require(token != address(msp)).  Can’t send any address except 0x0
-
-	await thisContract.claimTokens(0xb0030c1cc4b979ee749e71b17c082b915dcd3c92);  // VM Exception error 
-	contractBalance = (await sit.balanceOf.call(thisContract.address)).toNumber();
-	assert.equal(contractBalance,0);
-	
-
+- **[SITExchanger.claimTokens()](https://github.com/tikonoff/mothership/issues/1)** - Can’t send any address except 0x0
 ## Testing
 To further satisfy test coverage, I need Matt to answer some issues.
 ## Conclusion
