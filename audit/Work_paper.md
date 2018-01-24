@@ -1,7 +1,8 @@
 # MOTHERSHIP Work paper
 ## ./contracts
-```
+
 [Contribution.sol](/contracts/Contribution.sol)
+```
 .---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
 |                                                                        /Users/tikonoff/projects/mothership/contracts/Contribution.sol                                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -26,9 +27,11 @@
 | Contribution | pauseContribution()                                                                                         | public     | false    |         | onlyController                                 |
 | Contribution | resumeContribution()                                                                                        | public     | false    |         | onlyController                                 |
 '---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------'
+```
 
+[ContributionWallet.sol](/contracts/ContributionWallet.sol)
 
-
+```
 .----------------------------------------------------------------------------------------------------------------.
 |                      /Users/tikonoff/projects/mothership/contracts/ContributionWallet.sol                      |
 |----------------------------------------------------------------------------------------------------------------|
@@ -38,9 +41,9 @@
 | ContributionWallet | ()                                          | public     | false    |         | payable   |
 | ContributionWallet | withdraw()                                  | public     | false    |         |           |
 '----------------------------------------------------------------------------------------------------------------'
-
-
-
+```
+[MiniMeToken.sol](/contracts/MiniMeToken.sol)
+```
 .------------------------------------------------------------------------------------------------------------------------------------------------.
 |                                         /Users/tikonoff/projects/mothership/contracts/MiniMeToken.sol                                          |
 |------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -71,8 +74,9 @@
 | MiniMeTokenFactory | createCloneToken(address,uint,string,uint8,string,bool)    | public     | false    | MiniMeToken |                        |
 '------------------------------------------------------------------------------------------------------------------------------------------------'
 
-
-
+```
+[MSP.sol](/contracts/MSP.sol)
+```
 .-------------------------------------------------------------------------.
 |          /Users/tikonoff/projects/mothership/contracts/MSP.sol          |
 |-------------------------------------------------------------------------|
@@ -81,6 +85,9 @@
 | MSP      | MSP(address) | public     | false    |         | MiniMeToken |
 '-------------------------------------------------------------------------'
 
+```
+[MSPPlaceholder.sol](/contracts/MSPPlaceholder.sol)
+```
 .---------------------------------------------------------------------------------------------------------------------.
 |                          /Users/tikonoff/projects/mothership/contracts/MSPPlaceholder.sol                           |
 |---------------------------------------------------------------------------------------------------------------------|
@@ -96,7 +103,9 @@
 | MSPPlaceHolder | claimTokens(address)                            | public     | false    |         | onlyController |
 '---------------------------------------------------------------------------------------------------------------------'
 
-
+```
+[ReferalsTokenHolder.sol](/contracts/ReferalsTokenHolder.sol)
+```
 .-------------------------------------------------------------------------------------------------------.
 |                 /Users/tikonoff/projects/mothership/contracts/ReferalsTokenHolder.sol                 |
 |-------------------------------------------------------------------------------------------------------|
@@ -107,7 +116,9 @@
 | ReferalsTokenHolder | claimTokens(address)         | public     | false    |         | onlyController |
 '-------------------------------------------------------------------------------------------------------'
 
-
+```
+[SIT.sol](/contracts/SIT.sol)
+```
 .-------------------------------------------------------------------------.
 |          /Users/tikonoff/projects/mothership/contracts/SIT.sol          |
 |-------------------------------------------------------------------------|
@@ -116,7 +127,9 @@
 | SIT      | SIT(address) | public     | false    |         | MiniMeToken |
 '-------------------------------------------------------------------------'
 
-
+```
+[SITExchanger.sol](/contracts/SITExchanger.sol)
+```
 .---------------------------------------------------------------------------------------------------------.
 |                     /Users/tikonoff/projects/mothership/contracts/SITExchanger.sol                      |
 |---------------------------------------------------------------------------------------------------------|
@@ -134,6 +147,7 @@
 
 ## ./contracts/misc
 
+[Migration.sol](/contracts/misc/Migrations.sol)
 ```
 .--------------------------------------------------------------------------------.
 |       /Users/tikonoff/projects/mothership/contracts/misc/Migrations.sol        |
@@ -145,11 +159,12 @@
 | Migrations | upgrade(address)   | public     | false    |         | restricted |
 '--------------------------------------------------------------------------------'
 
-
 ```
-SafeMath.sol – library, therefore it didn’t processed by Solidity Function Profiler. 02102999600
+[SafeMath.sol](/contracts/misc/SafeMath.sol) - This is a library, therefore it was not processed by Solidity Function Profiler.
 
 ## . /contracts/test
+
+[ContributionMock.sol](/contracts/test/ContributionMock.sol)
 
 ```
 .------------------------------------------------------------------------------------------------.
@@ -161,7 +176,9 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | ContributionMock | getBlockNumber()           | internal   | true     | uint    |              |
 | ContributionMock | setMockedBlockNumber(uint) | public     | false    |         |              |
 '------------------------------------------------------------------------------------------------'
-
+```
+[MSPMock.sol](/contracts/test/MSPMock.sol)
+```
 .-------------------------------------------------------------------------------------.
 |           /Users/tikonoff/projects/mothership/contracts/test/MSPMock.sol            |
 |-------------------------------------------------------------------------------------|
@@ -171,7 +188,9 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | MSPMock  | getBlockNumber()           | internal   | true     | uint    |           |
 | MSPMock  | setMockedBlockNumber(uint) | public     | false    |         |           |
 '-------------------------------------------------------------------------------------'
-
+```
+[MSPPlaceholderMock.sol](/contracts/test/MSPPlaceholderMock.sol)
+```
 .-----------------------------------------------------------------------------------------------------------------------------.
 |                          /Users/tikonoff/projects/mothership/contracts/test/MSPPlaceholderMock.sol                          |
 |-----------------------------------------------------------------------------------------------------------------------------|
@@ -181,7 +200,9 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | MSPPlaceholderMock | getTime()                                           | internal   | false    | uint    |                |
 | MSPPlaceholderMock | setMockedTime(uint)                                 | public     | false    |         |                |
 '-----------------------------------------------------------------------------------------------------------------------------'
-
+```
+[SafeMathMock.sol](/contracts/test/SafeMathMock.sol)
+```
 .----------------------------------------------------------------------------------------.
 |          /Users/tikonoff/projects/mothership/contracts/test/SafeMathMock.sol           |
 |----------------------------------------------------------------------------------------|
@@ -191,7 +212,9 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | SafeMathMock | subtract(uint256,uint256) | public     | false    |         |           |
 | SafeMathMock | add(uint256,uint256)      | public     | false    |         |           |
 '----------------------------------------------------------------------------------------'
-
+```
+[SITExchangerMock.sol](/contracts/test/SITExchangerMock.sol)
+```
 .---------------------------------------------------------------------------------------------------------------.
 |                    /Users/tikonoff/projects/mothership/contracts/test/SITExchangerMock.sol                    |
 |---------------------------------------------------------------------------------------------------------------|
@@ -202,8 +225,9 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | SITExchangerMock | setMockedBlockNumber(uint)                | public     | false    |         |              |
 | SITExchangerMock | collect()                                 | public     | false    |         |              |
 '---------------------------------------------------------------------------------------------------------------'
-
-
+```
+[SITMock.sol](/contracts/test/SITMock.sol)
+```
 .-------------------------------------------------------------------------------------.
 |           /Users/tikonoff/projects/mothership/contracts/test/SITMock.sol            |
 |-------------------------------------------------------------------------------------|
@@ -213,5 +237,4 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | SITMock  | getBlockNumber()           | internal   | true     | uint    |           |
 | SITMock  | setMockedBlockNumber(uint) | public     | false    |         |           |
 '-------------------------------------------------------------------------------------'
-
 ```
