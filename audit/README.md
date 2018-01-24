@@ -57,7 +57,7 @@ The audit report is focused on the following key areas - though this is not an e
 ## Findings
 <!-- Here goes a list of issues -->
 ### Minor
-- **[\*.claimTokens()]** (issues/1)
+- [\*.claimTokens()] (issues/1)
 - **SITExchanger.collect()**
 	```javascript
 	assert(msp.transfer(msg.sender, amount));
