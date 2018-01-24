@@ -1,6 +1,6 @@
 # Kovan test-network functional testing
 
-Roles
+### Roles
 
 * - Mothership, [0x0043b7f4e75d12ea27c83ef4a8344a6b392397a5](https://kovan.etherscan.io/address/0x0043b7f4e75d12ea27c83ef4a8344a6b392397a5)
 * - Contributor, [0x007Ce47aBa1f6cfF4667C9Bf4cFF97d9A9796607]()
@@ -8,7 +8,7 @@ Roles
 * - Team Member,[]()
 * - Referal,[]()
 
-Major Events (periods)
+### Major Events (periods)
 
 * SIT Distribution
 * Contribution
@@ -16,7 +16,7 @@ Major Events (periods)
 * Awaiting for network deployment
 * Network deployed
 
-Events
+### Events
 
 * SIT Distribution (pre-requisite)
 * Contribution period started
