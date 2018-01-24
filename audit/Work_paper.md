@@ -1,6 +1,7 @@
 # MOTHERSHIP Work paper
 ## ./contracts
-
+```
+[Contribution.sol](/contracts/Contribution.sol)
 .---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------.
 |                                                                        /Users/tikonoff/projects/mothership/contracts/Contribution.sol                                                                         |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -129,10 +130,11 @@
 | SITExchanger | getBlockNumber()                      | internal   | true     | uint256 |                |
 | SITExchanger | claimTokens(address)                  | public     | false    |         | onlyController |
 '---------------------------------------------------------------------------------------------------------'
+```
 
-. /contracts/misc
+## ./contracts/misc
 
-
+```
 .--------------------------------------------------------------------------------.
 |       /Users/tikonoff/projects/mothership/contracts/misc/Migrations.sol        |
 |--------------------------------------------------------------------------------|
@@ -144,9 +146,12 @@
 '--------------------------------------------------------------------------------'
 
 
+```
 SafeMath.sol – library, therefore it didn’t processed by Solidity Function Profiler. 02102999600
-. /contracts/test
 
+## . /contracts/test
+
+```
 .------------------------------------------------------------------------------------------------.
 |            /Users/tikonoff/projects/mothership/contracts/test/ContributionMock.sol             |
 |------------------------------------------------------------------------------------------------|
@@ -209,3 +214,4 @@ SafeMath.sol – library, therefore it didn’t processed by Solidity Function P
 | SITMock  | setMockedBlockNumber(uint) | public     | false    |         |           |
 '-------------------------------------------------------------------------------------'
 
+```
