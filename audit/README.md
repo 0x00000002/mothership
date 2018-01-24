@@ -62,9 +62,9 @@ The audit report is focused on the following key areas - though this is not an e
 ### Moderate
 - None found
 ### Major
-- None found
-### Critical
 - **[SITExchanger.claimTokens()](https://github.com/tikonoff/mothership/issues/1)** - Can’t send any address except 0x0
+### Critical
+- None found
 ## Testing
 To further satisfy test coverage, I need Matt to answer some issues.
 ## Conclusion
