@@ -20,11 +20,11 @@ contract("MultiSig Wallet ", function(accounts) {
         msig = await MultiSigWallet.new([addressMothership], 1, { from: addressMothership });
     });
 
-    // it("should accept tokens through fallback", async() => {
-    //     msig.foo.call(amount);                                                      //TODO: fallback test
-    //     contractBalance =  (await msp.balanceOf.call(msig.address)).toNumber();
-    //     assert.equal(contractBalance,amount);
-    // });
+    it("should accept tokens through fallback", async() => {
+        msig.sendTransaction({value: amount, from: addressMothership});                                                      //TODO: fallback test
+        contractBalance =  (await msp.balanceOf.call(msig.address)).toNumber();
+        assert.equal(contractBalance,amount);
+    });
 
     it("should get owners", async() => {
         owners = await msig.getOwners();
@@ -35,7 +35,7 @@ contract("MultiSig Wallet ", function(accounts) {
     // it("should add owner", async() => {
     //     console.log("msig address: " + msig.address);
     //     console.log("msig controller: " + this.address);
-    //     await msig.contract.addOwner(addressOwner1, {from: addressMothership});   // TODO:  addOwner
+    //     await msig.addOwner(addressOwner1, {from: msig.address});   // TODO:  addOwner
     //     owners = await msig.getOwners();
     //     console.log("Owners: " + owners.length);
     //     console.log("Owner 0: " + owners[0]);

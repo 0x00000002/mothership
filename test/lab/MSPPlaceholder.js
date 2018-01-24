@@ -92,13 +92,18 @@ contract("MSPPlaceholder <Blockchain Labs>, @AT,  21/01/2018 ", function(account
             contribution.address,
             sitExchanger.address,
         );
-        let controller = await newMSPP.controller();
+
         watcher = newMSPP.ControllerChanged();
         await newMSPP.changeController(addressCommunity, { from: addressMothership });     // TODO: changeController
         let logs = watcher.get();
         console.log("" + logs[0]);
         assert.equal(logs[0].event, "ControllerChanged");
         assert.equal(logs[0].args._newController, addressTeam);
+
+        await newMSPP.claimTokens(msp.address);
+        contractBalance = (await msp.balanceOf.call(newMSPP.address)).toNumber();
+        assert.equal(contractBalance, 0);
+
     });
 
 });

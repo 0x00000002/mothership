@@ -26,8 +26,8 @@ contract("Contribution Wallet", function(accounts) {
         await msp.generateTokens(thisContract.address, amount);
         contractBalance = (await msp.balanceOf.call(thisContract.address)).toNumber();
         assert.equal(contractBalance, amount);
-
-        await thisContract.withdraw({from: msig.address});  // TODO: how to unlock account?
+        console.log("asdf");
+        await thisContract.withdraw();  // TODO: how to unlock account?
     });
 
 });

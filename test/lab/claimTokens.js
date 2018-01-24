@@ -11,7 +11,7 @@ let miniMeTokenFactory, msp, sit, sitEx, mspp, referals;
 let thisContract, contractBalance, contribution, logs;
 let amount = 50000000000000000000;
 
-contract("any ", function(accounts) {
+contract("any <Blockchain Labs>, @AT, 23 Jan 2018", function(accounts) {
 
     const addressMothership = accounts[0];
     const addressCommunity = accounts[1];
@@ -109,17 +109,6 @@ contract("any ", function(accounts) {
             await thisContract.claimTokens(0x0);
             contractBalance = (await web3.eth.getBalance(thisContract.address)).toNumber();
             assert.equal(contractBalance, 0);
-
-            watcher = thisContract.ControllerChanged();
-            assert.isOk(await msp.changeController(thisContract.address));
-            await thisContract.claimTokens(msp.address);
-            contractBalance = (await msp.balanceOf.call(thisContract.address)).toNumber();
-            assert.equal(contractBalance, 0);
-            logs = watcher.get();
-            if (logs[0]) {                                                  // TODO: why it is not called?
-                assert.equal(logs[0].event, "ControllerChanged");
-                assert.equal(logs[0].args._newController, thisContract.address());
-            }
         });
     });
 });
