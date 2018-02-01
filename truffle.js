@@ -25,27 +25,27 @@ module.exports = {
       host: 'localhost',
       port: 8545,
       gas: 4000000,
-      gasPrice: 20e9,
+      gasPrice: 20e9
     },
     main: {
       network_id: 1,
       provider: providerMain,
       gas: 4000000,
-      gasPrice: 20e9,
+      gasPrice: 20e9
     },
     ropsten: {
       network_id: 3,
       provider: providerRopsten,
       gas: 4000000,
-      gasPrice: 20e9,
+      gasPrice: 20e9
     },
     kovan: {
       host: 'localhost',
       port: 8545,
       network_id: 42,
       gas: 6000000,
-      gasPrice: 20e9,
-    },
+      gasPrice: 20e9
+    }
   },
   coverage: {
       host: "localhost",
